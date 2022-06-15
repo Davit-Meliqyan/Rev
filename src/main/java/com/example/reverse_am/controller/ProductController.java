@@ -33,7 +33,7 @@ public class ProductController {
         return ResponseEntity.ok().body(this.productService.getProductsWorker());
     }
 
-    @PostMapping("/api/product")
+    @PostMapping("/user/new")
     public ResponseEntity<?> createProduct(@Valid @RequestBody UserProductDTO productDTO){
         Assert.notNull(productDTO,"Product is null ");
         Assert.notNull(productDTO.getCategory(),"Category is null ");
